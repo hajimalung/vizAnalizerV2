@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass {
+    -fx-background-color: #333;
+}
+.label{
+    -fx-text-fill: white;
+}
+#flxMain{
+    -fx-background-color: #666;
+}
+#flxOptions{
+    -fx-background-color: #333;
+}
+#loadingScreen{
+    -fx-background-color: #333;
+}
+.choice-box > .label { -fx-text-fill: #333; }
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+.choice-box .menu-item > .label { -fx-text-fill: #333; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: white; }

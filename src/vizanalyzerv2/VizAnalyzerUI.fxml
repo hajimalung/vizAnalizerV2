@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vizanalyzerv2.VizAnalyzerUIController">
+    <stylesheets>
+        <URL value="@vizanalyzerui.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="263.0" layoutY="111.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="78.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="34.0" layoutY="31.0" text="Viz Project Path :" />
+                  <TextField fx:id="projectPathField" editable="false" layoutX="132.0" layoutY="27.0" prefHeight="25.0" prefWidth="595.0" />
+                  <Button fx:id="browseButton" layoutX="738.0" layoutY="27.0" mnemonicParsing="false" onAction="#browseButtonOnClickAction" text="Browse" />
+                  <Button fx:id="scanProjectButton" disable="true" layoutX="923.0" layoutY="27.0" mnemonicParsing="false" onAction="#scanProjectOnCLickAction" text="Scan" />
+                  <ChoiceBox fx:id="deviceSelector" disable="true" layoutX="812.0" layoutY="27.0" prefHeight="25.0" prefWidth="97.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="129.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="console" editable="false" prefHeight="200.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane fx:id="mainPanel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Accordion fx:id="optionsAccordian" disable="true" layoutX="14.0" layoutY="36.0" prefHeight="344.0" prefWidth="202.0">
+                    <panes>
+                      <TitledPane fx:id="formsPane" animated="false" text="Forms for Resources">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="formsListView" layoutX="-14.0" layoutY="23.0" prefHeight="315.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <TextField fx:id="searchBoxField" disable="true" layoutX="15.0" layoutY="5.0" onKeyReleased="#searchingAction" prefHeight="25.0" prefWidth="200.0" promptText="Search " />
+                  <Label fx:id="lblFormName" layoutX="286.0" layoutY="9.0" text="Label" />
+                  <ListView fx:id="widgetImageList" disable="true" layoutX="286.0" layoutY="36.0" prefHeight="344.0" prefWidth="200.0" />
+                  <TextArea fx:id="skinCode" disable="true" editable="false" layoutX="486.0" layoutY="36.0" prefHeight="344.0" prefWidth="501.0" />
+                  <Button fx:id="exportButton" layoutX="899.0" layoutY="5.0" mnemonicParsing="false" onAction="#exportToFileClicked" text="Export To File" />
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
